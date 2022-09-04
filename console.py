@@ -101,7 +101,6 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** no instance found **")
 
-
     def do_destroy(self, line):
         """Deletes an instance based on the class name and id
         (save the change into the JSON file)"""
@@ -136,7 +135,7 @@ class HBNBCommand(cmd.Cmd):
             for key in objects:
                 k = key.split(".")
                 if k[0] == args[0]:
-                    print(objects[key])    
+                    print(objects[key])
 
     def do_count(self, line):
         """ counts the number of  instances of the class passed: 'line'"""
