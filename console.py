@@ -17,7 +17,7 @@ class HBNBCommand(cmd.Cmd):
     """cmd class 'HBNBCommand(cmd.Cmd)' """
     prompt = "(hbnb) "
 
-    class_list = ["BaseModel", "User", "City", "Place", "Review", "State"]
+    class_list = ["BaseModel", "Amenity", "User", "City", "Place", "Review", "State"]
 
     def precmd(self, line):
         """When precmd() is called, the 'line' is stripped of [, . ()"] then
@@ -50,7 +50,7 @@ class HBNBCommand(cmd.Cmd):
             if not line:
                 return False
         if not line:
-            print("** class name is missing **")
+            print("** class name missing **")
             return True
         else:
             args = line.split(" ")
