@@ -159,21 +159,24 @@ class HBNBCommand(cmd.Cmd):
         err = HBNBCommand.error_handler(line, command="update")
         if err:
             return
-        arg = line.split(" ")
-        if "\"" in arg[3]:
-            arg[3] = arg[1:-1]
-
-        if str(arg[3]).isdigit():
-            arg[3] = int(arg[3])
-
+        args = line.split()
         store = storage.all()
-        ki = f"{arg[0]}.{arg[1]}"
-        for key in store:
-            if ki == key:
-                obj = store[ki]
-                setattr(obj, arg[2], arg[3])
-                obj.save()
+        key = "{}.{}".format(args[0], args[1])
+        arg3 = args[3]
+        arg2 = args[2]
+        arg2 = arg2.strip('"')
+        arg2 = arg2.strip("'")
+        if (arg3).isdigit():
+            arg3 = int(arg3)
+        else:
+            arg3 = arg3.strip('"')
+            arg3 = arg3.strip("'")
+        for k in store:
+            if k == key:
+                setattr(store[key], arg2, arg3)#cast(arg3))
+                store[key].save()
                 return
+        print("** instance not found **")
 
 
 if __name__ == '__main__':

@@ -1,32 +1,41 @@
 {
-    "BaseModel.7c506414-c70e-4896-9b5e-bd81baed540f": {
-        "id": "7c506414-c70e-4896-9b5e-bd81baed540f",
-        "created_at": "2022-09-04T16:09:35.009556",
-        "updated_at": "2022-09-04T16:09:35.009569",
+    "BaseModel.42c9cee3-5763-4452-9cfd-30b1386b4ad6": {
+        "id": "42c9cee3-5763-4452-9cfd-30b1386b4ad6",
+        "created_at": "2022-09-04T16:18:31.546233",
+        "updated_at": "2022-09-04T16:18:31.546241",
         "__class__": "BaseModel"
     },
-    "BaseModel.7071af79-4d44-42a6-b791-923d78647465": {
-        "id": "7071af79-4d44-42a6-b791-923d78647465",
-        "created_at": "2022-09-04T16:09:35.010699",
-        "updated_at": "2022-09-04T16:09:35.010708",
+    "BaseModel.8ba7ef41-f142-41cd-9288-97aa7535918d": {
+        "id": "8ba7ef41-f142-41cd-9288-97aa7535918d",
+        "created_at": "2022-09-04T16:18:31.547536",
+        "updated_at": "2022-09-04T16:18:31.547549",
         "__class__": "BaseModel"
     },
-    "User.3d4c18c7-462c-4dcf-ab39-4ba1f81ac49f": {
-        "id": "3d4c18c7-462c-4dcf-ab39-4ba1f81ac49f",
-        "created_at": "2022-09-04T16:09:35.010974",
-        "updated_at": "2022-09-04T16:09:35.010981",
-        "__class__": "User"
-    },
-    "State.6b8a8179-f523-4383-b63f-49e4514f11e8": {
-        "id": "6b8a8179-f523-4383-b63f-49e4514f11e8",
-        "created_at": "2022-09-04T16:09:35.011206",
-        "updated_at": "2022-09-04T16:09:35.011212",
+    "State.9144870c-57a8-4ebf-bd08-be6ce60b7dcb": {
+        "id": "9144870c-57a8-4ebf-bd08-be6ce60b7dcb",
+        "created_at": "2022-09-04T16:18:31.548228",
+        "updated_at": "2022-09-04T16:18:31.548234",
         "__class__": "State"
     },
-    "City.ba6d3810-4448-40fc-be38-012cbe0e385e": {
-        "id": "ba6d3810-4448-40fc-be38-012cbe0e385e",
-        "created_at": "2022-09-04T16:09:35.011441",
-        "updated_at": "2022-09-04T16:09:35.011447",
+    "City.56f19882-3e22-4cbb-a334-de679722ab25": {
+        "id": "56f19882-3e22-4cbb-a334-de679722ab25",
+        "created_at": "2022-09-04T16:18:31.548481",
+        "updated_at": "2022-09-04T16:18:31.548487",
         "__class__": "City"
+    },
+    "User.b5e36e4c-dc5b-4dcb-83ff-85542eeced50": {
+        "id": "b5e36e4c-dc5b-4dcb-83ff-85542eeced50",
+        "created_at": "2022-09-04T16:25:04.800061",
+        "updated_at": "2022-09-04T16:50:45.258835",
+        "\"first\"": [
+            "b5e36e4c-dc5b-4dcb-83ff-85542eeced50",
+            "\"first\""
+        ],
+        "\"fati\"": [
+            "b5e36e4c-dc5b-4dcb-83ff-85542eeced50",
+            "\"fati\""
+        ],
+        "new": "nbg",
+        "__class__": "User"
     }
 }
