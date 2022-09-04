@@ -17,7 +17,8 @@ class HBNBCommand(cmd.Cmd):
     """cmd class 'HBNBCommand(cmd.Cmd)' """
     prompt = "(hbnb) "
 
-    class_list = ["BaseModel", "Amenity", "User", "City", "Place", "Review", "State"]
+    class_list = ["BaseModel", "Amenity", "User", "City", "Place",
+                  "Review", "State"]
 
     def precmd(self, line):
         """When precmd() is called, the 'line' is stripped of [, . ()"] then
@@ -173,7 +174,7 @@ class HBNBCommand(cmd.Cmd):
             arg3 = arg3.strip("'")
         for k in store:
             if k == key:
-                setattr(store[key], arg2, arg3)#cast(arg3))
+                setattr(store[key], arg2, arg3)
                 store[key].save()
                 return
         print("** instance not found **")
