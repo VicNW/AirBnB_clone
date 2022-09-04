@@ -50,13 +50,13 @@ class HBNBCommand(cmd.Cmd):
             if not line:
                 return False
         if not line:
-            print("class name is missing")
+            print("** class name is missing **")
             return True
         else:
             args = line.split(" ")
 
         if args[0] not in HBNBCommand.class_list:
-            print("class doesn't exist")
+            print("** class doesn't exist **")
             return True
 
         n = len(args)
@@ -65,7 +65,7 @@ class HBNBCommand(cmd.Cmd):
         for arg in kwargs.values():
             if arg in ["show", "destroy", "update"]:
                 if n < 2:
-                    print("instance id missing")
+                    print("** instance id missing **")
                     return True
             if arg == "update":
                 if n < 3:
@@ -77,8 +77,8 @@ class HBNBCommand(cmd.Cmd):
         return False
 
     def do_create(self, line):
-        """Creates a new instance of BaseModel, saves it
-        (to the JSON file) and prints the id """
+        """Creates a new instance of the class and saves
+        it (to the JSON file) and prints the id"""
         err = HBNBCommand.error_handler(line)
         if err:
             return
@@ -108,7 +108,7 @@ class HBNBCommand(cmd.Cmd):
         if err:
             return
         else:
-            arg = line.split()
+            arg = line.split(" ")
             key = ".".join(arg)
             store = storage.all()
             if key in store:
@@ -138,8 +138,8 @@ class HBNBCommand(cmd.Cmd):
                     print(objects[key])
 
     def do_count(self, line):
-        """ counts the number of  instances of the class passed: 'line'"""
-        arg = line.split()
+        """ counts the number of instances of the class passed: 'line'"""
+        arg = line.split(" ")
         store = storage.all()
         count = 0
 
@@ -159,7 +159,7 @@ class HBNBCommand(cmd.Cmd):
         err = HBNBCommand.error_handler(line, command="update")
         if err:
             return
-        arg = line.split()
+        arg = line.split(" ")
         if "\"" in arg[3]:
             arg[3] = arg[1:-1]
 
