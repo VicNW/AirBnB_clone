@@ -55,7 +55,7 @@ class TestHBNBCommand_help(unittest.TestCase):
             self.assertEqual(h, output.getvalue().strip())
 
     def test_help_show(self):
-        h = ("\prints the string representation of an instance\n        "
+        h = ("prints the string representation of an instance\n        "
              "based on the class name and id")
         with patch("sys.stdout", new=StringIO()) as output:
             self.assertFalse(HBNBCommand().onecmd("help show"))
@@ -84,7 +84,7 @@ class TestHBNBCommand_help(unittest.TestCase):
     def test_help_update(self):
         h = ("Updates an instance based on the class name and\n        "
              "id by adding or updating attribute (save the change\n"
-                     "into the JSON file")
+             "into the JSON file")
         with patch("sys.stdout", new=StringIO()) as output:
             self.assertFalse(HBNBCommand().onecmd("help update"))
             self.assertEqual(h, output.getvalue().strip())
@@ -1160,7 +1160,7 @@ class TestHBNBCommand_update(unittest.TestCase):
         with patch("sys.stdout", new=StringIO()) as output:
             HBNBCommand().onecmd("create BaseModel")
             testId = output.getvalue().strip()
-        testCmd = "update BaseModel {} attr_name 'attr_value'".format(testId)
+        testCmd = "update BaseModel {} attr_name attr_value".format(testId)
         self.assertFalse(HBNBCommand().onecmd(testCmd))
         test_dict = storage.all()["BaseModel.{}".format(testId)].__dict__
         self.assertEqual("attr_value", test_dict["attr_name"])
